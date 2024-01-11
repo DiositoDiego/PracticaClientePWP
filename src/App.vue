@@ -1,0 +1,64 @@
+<script setup>
+</script>
+
+<template>
+  <div>
+    <div>
+      <b-navbar type="dark" variant="dark">
+        <b-navbar-nav>
+          <b-nav-item href="#">Home</b-nav-item>
+
+          <!-- Navbar dropdowns -->
+          <b-nav-item-dropdown text="Lang" right>
+            <b-dropdown-item href="#">EN</b-dropdown-item>
+            <b-dropdown-item href="#">ES</b-dropdown-item>
+            <b-dropdown-item href="#">RU</b-dropdown-item>
+            <b-dropdown-item href="#">FA</b-dropdown-item>
+          </b-nav-item-dropdown>
+
+          <b-nav-item-dropdown text="User" right>
+            <b-dropdown-item href="#">Account</b-dropdown-item>
+            <b-dropdown-item href="#">Settings</b-dropdown-item>
+          </b-nav-item-dropdown>
+        </b-navbar-nav>
+      </b-navbar>
+    </div>
+
+    <div style="display: flex;">
+      <div>
+        <div>
+          <b-button v-b-toggle.sidebar-1>Toggle Sidebar</b-button>
+          <b-sidebar id="sidebar-1" title="Sidebar">
+            <div class="px-3 py-2">
+              <p>
+                Cras mattis consectetur purus sit amet fermentum. Cras justo
+                odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
+                risus, porta ac consectetur ac, vestibulum at eros.
+              </p>
+              <b-img
+                src="https://picsum.photos/500/500/?image=54"
+                fluid
+                thumbnail
+              ></b-img>
+            </div>
+          </b-sidebar>
+        </div>
+
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+</style>
