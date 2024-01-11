@@ -25,10 +25,11 @@
     </div>
 
     <div style="display: flex;">
+      <div style="width: 117vh; height: 100vh;"></div>
       <div>
         <div>
           <b-button v-b-toggle.sidebar-1>Toggle Sidebar</b-button>
-          <b-sidebar id="sidebar-1" title="Sidebar">
+          <b-sidebar id="sidebar-1" title="Sidebar" visible no-slide>
             <div class="px-3 py-2">
               <p>
                 Cras mattis consectetur purus sit amet fermentum. Cras justo
