@@ -1,44 +1,105 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://v2.vuejs.org/">Vue 2</a>.
-    </h3>
+  <div>
+    <div>
+      HOLAMUNDO
+    </div>
+    <b-input-group>
+      <b-form-input
+        v-model="name"
+        placeholder="Nombre"
+        @input="validateName(name)"
+        :state="validatedName"
+      ></b-form-input>
+
+    </b-input-group>
+    
+    <b-input-group>
+
+    </b-input-group>
+    
+    <b-input-group>
+
+    </b-input-group>
   </div>
 </template>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
-}
+<script>
+import Vue from "vue";
+Vue.createApp({
+  data() {
+    return {
+      name: '',
+      lastname: '',
+      surname: '',
+      birthdate: '',
+      email: '',
+      phoneNumber: '',
+      photo: {},
+      //address
+      street: '',
+      streetNumber: '',
+      city: '',
+      postalCode: 0,
 
-h3 {
-  font-size: 1.2rem;
-}
+      validatedName: null,
+      validatedLastName: null,
+      validatedSurname: null,
+      validatedAddress: null,
+      validatedBirthdate: null,
+      validatedEmail: null,
+      validatedPhoneNumber: null,
+      validatedPhoto: null,
+      validatedStreet: null,
+      validatedStreetNumber: null,
+      validatedCity: null,
+      validatedPostalCode: null,
+    };
+  },
+  methods: {
+    validateName(name){
+      if (name.length < 3) {
+        this.validatedName = false;
+      } else {
+        this.validatedName = true;
+      }
+    },
+    validateLastName(lastname){
+      if (lastname.length < 3) {
+        this.validatedLastName = false;
+      } else {
+        this.validatedLastName = true;
+      }
+    },
+    validateBirthdate(birthdate){
+      if(true){
 
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
+      }
+    },
+    validateEmail(email){
 
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    display: block;
-    text-align: left;
+    },
+    validatePhoneNumber(phoneNumber){
+
+    },
+    validatePhoto(photo){
+
+    },
+    validateStreet(street){
+
+    },
+    validateStreetNumber(streetNumber){
+
+    },
+    validateCity(city){
+
+    },
+    validatePostalCode(postalCode){
+
+    },
   }
-}
+});
+</script>
+
+<style>
+
 </style>

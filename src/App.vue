@@ -5,7 +5,9 @@
     <div>
       <b-navbar type="dark" style="margin-left: 45vh;" variant="dark">
         <b-navbar-nav>
-          <b-nav-item href="#">Home</b-nav-item>
+          <b-nav-item>
+            <b-link :to="{ name: 'formulario' }"> Formulario </b-link>
+          </b-nav-item>
 
           <!-- Navbar dropdowns -->
           <b-nav-item-dropdown text="Lang" right>
@@ -34,7 +36,7 @@
             shadow
             visible
           >
-            <template #default="{ hide }">
+            <template #default="{  }">
               <div class="p-3">
                 <h4 id="sidebar-no-header-title">Custom header sidebar</h4>
                 <p>
@@ -48,15 +50,7 @@
         </div>
 
         <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </p>
+          <router-view></router-view>
         </div>
       </div>
     </div>
